@@ -7,10 +7,9 @@ using Airline.entity;
 
 namespace Airline.controller
 {
-    internal interface IController
+    public interface IController
     {
-        void StartPlane(Plane plane);
-        Flight TakeFlight(Plane plane);
-        void SaveFlight(Flight fight);
+        void StartFlight();
+        List<Plane> GetPlanes();
     }  
 }

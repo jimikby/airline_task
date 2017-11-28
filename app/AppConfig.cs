@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Airline.entity
+namespace Airline.app
 {
-    public interface IEntity
+    public class AppConfig
     {
-         int Uid { get; set; }
+        public static readonly string PlanesFolder = "D:\\planes\\";
     }
 }

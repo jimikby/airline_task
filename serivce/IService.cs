@@ -7,9 +7,9 @@ using Airline.entity;
 
 namespace Airline.serivce
 {
-    internal interface IService<out T> where T : IEntity
+    public interface IService<T> where T : IEntity
     {
-        void SaveState();
-        T LoadState();
+        void Write(T objectToWrite);
+        List<T> Read();
     }
 }

@@ -8,23 +8,23 @@ using Airline.repository;
 
 namespace Airline.serivce
 {
-    internal class FlightService : IService<Flight>
+    public class FlightService : IService<Plane>
     {
-        public FlightService(IRepository<Flight> repository)
+        public FlightService(IRepository<Plane> repository)
         {
             Repository = repository;
         }
 
-        private IRepository<Flight> Repository { get; }
+        private IRepository<Plane> Repository { get; }
 
-        public void SaveState()
+        public void Write(Plane plane)
         {
-            Repository.SaveState();
+            Repository.Write(plane);
         }
 
-        public Flight LoadState()
+        public List<Plane> Read()
         {
-            return Repository.LoadState();
+            return Repository.Read();
         }
     }
 }

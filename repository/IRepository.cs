@@ -7,9 +7,9 @@ using Airline.entity;
 
 namespace Airline.repository
 {
-    internal interface IRepository<out T> where T : IEntity
+    public interface IRepository<T> where T : IEntity
     {
-        void SaveState();
-        T LoadState();
+        void Write(T objectToWrite);
+        List<T> Read();
     }
 }

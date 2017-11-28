@@ -1,9 +1,25 @@
-﻿namespace Airline.app
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Windows.Forms;
+using Airline.controller;
+using Airline.entity;
+
+namespace Airline.app
 {
-    internal class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        [STAThread]
+        static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            var di = new DirectoryInfo(AppConfig.PlanesFolder);
+            foreach (var file in di.GetFiles())
+            {
+                file.Delete();
+            }
+            Application.Run(new AirlineForm(new PlaneController()));
         }
     }
 }
