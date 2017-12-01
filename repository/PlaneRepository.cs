@@ -16,10 +16,6 @@ namespace Airline.repository
             if (clean || !File.Exists(_filePath)) Clean();
         }
 
-        public PlaneRepository()
-        {
-        }
-
         public void Write(Plane objectToWrite)
         {
             var planes = Read() ?? new List<Plane>();
@@ -66,12 +62,12 @@ namespace Airline.repository
             }
         }
 
-        public void Clean()
+        private void Clean()
         {
             if (File.Exists(_filePath)) File.Delete(_filePath);
             using (File.Create(_filePath))
             {
-            };
+            }
         }
 
     }

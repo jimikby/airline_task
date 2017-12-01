@@ -10,7 +10,7 @@ namespace Airline
 {
     public partial class AirlineForm : Form
     {
-        public IController Controller { get; }
+        private IController Controller { get; }
 
         public AirlineForm(IController controller)
         {
@@ -22,7 +22,7 @@ namespace Airline
         private void AirlineForm_Load_1(object sender, EventArgs e)
         {
             var timer = new Timer { Interval = (200) };
-            timer.Tick += new EventHandler(timer_Tick);
+            timer.Tick += timer_Tick;
             timer.Start();
         }
 
@@ -49,7 +49,6 @@ namespace Airline
                     g.FillEllipse(bBrush, (int) (plane.FlightDistance - plane.Distance)+(6*i),
                         496 - (int) (plane.Altitude / 40), 4, 3);
                 }
-                Debug.WriteLine(plane.Distance);
             }
         }
     }

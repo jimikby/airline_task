@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\jimik\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_Airline.775212597.00" t="ExcludeRecursive" />
+    <e p="D:\prog\csharp\airline_task" t="IncludeRecursive">
+      <e p="Airline.csproj" t="IncludeRecursive" />
+      <e p="Airline.sln" t="IncludeFlat" />
+      <e p="AirlineForm.cs" t="Include" />
+      <e p="AirlineForm.Designer.cs" t="Include" />
+      <e p="AirlineForm.resx" t="Include" />
+      <e p="app" t="Include">
+        <e p="AppConfig.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="App.config" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="controller" t="Include">
+        <e p="IController.cs" t="Include" />
+        <e p="PlaneController.cs" t="Include" />
+      </e>
+      <e p="entity" t="Include">
+        <e p="IEntity.cs" t="Include" />
+        <e p="Plane.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+        <e p="Resources.Designer.cs" t="Include" />
+        <e p="Resources.resx" t="Include" />
+        <e p="Settings.Designer.cs" t="Include" />
+        <e p="Settings.settings" t="Include" />
+      </e>
+      <e p="repository" t="Include">
+        <e p="IRepository.cs" t="Include" />
+        <e p="PlaneRepository.cs" t="Include" />
+      </e>
+      <e p="serivce" t="Include">
+        <e p="IService.cs" t="Include" />
+        <e p="PlaneService.cs" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>

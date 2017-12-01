@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Airline.entity;
 using Airline.repository;
 
 namespace Airline.serivce
 {
-    public class FlightService : IService<Plane>
+    public class PlaneService : IService<Plane>
     {
-        public FlightService(IRepository<Plane> repository)
+        public PlaneService(IRepository<Plane> repository)
         {
             Repository = repository;
         }

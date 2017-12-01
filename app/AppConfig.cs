@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Airline.app
+﻿namespace Airline.app
 {
-    public class AppConfig
+    public static class AppConfig
     {
-        public static readonly string PlanesFolder = "D:\\planes\\";
+        public const string PlanesFolder = "D:\\planes\\";
     }
 }

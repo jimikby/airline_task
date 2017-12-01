@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Airline.entity
+﻿namespace Airline.entity
 {
     public interface IEntity
     {
-         int Uid { get; set; }
+       int Uid { get; set; }
     }
 }

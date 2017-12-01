@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Runtime.InteropServices;
+using System.Linq;
 using System.Threading;
 using Airline.app;
 using Airline.entity;
@@ -18,16 +18,7 @@ namespace Airline.controller
         public List<Plane> GetPlanes()
         {
             var files = Directory.GetFiles(AppConfig.PlanesFolder);
-            var planes = new List<Plane>();
-            foreach (var file in files)
-            {
-                var planes1 = new PlaneRepository(file, false).Read();
-                if (planes1 != null)
-                {
-                    planes.Add(planes1[planes1.Count - 1]);
-                }
-            }
-            return planes;
+            return (from file in files select new PlaneRepository(file, false).Read() into planes1 where planes1 != null select planes1[planes1.Count - 1]).ToList();
         }
     }
 }
